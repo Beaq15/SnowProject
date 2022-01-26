@@ -21,7 +21,11 @@ namespace Tmpl8 {
 	{
 
 		if (keysStates[(int)Keys::escape])
-			quit = true;
+		{
+			SDL_Event closeWindowEvent;
+       	 		closeWindowEvent.type = SDL_QUIT;
+        		SDL_PushEvent(&closeWindowEvent);
+		}
 		else if (keysStates[(int)Keys::down])
 		{
 			playButton.selected = true;
@@ -42,7 +46,9 @@ namespace Tmpl8 {
 		}
 		if (keysStates[(int)Keys::enter] && quitButton.selected)
 		{
-			quit = true;
+			SDL_Event closeWindowEvent;
+        		closeWindowEvent.type = SDL_QUIT;
+        		SDL_PushEvent(&closeWindowEvent);
 		}
 	}
 
