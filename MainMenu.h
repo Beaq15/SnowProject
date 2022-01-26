@@ -31,7 +31,6 @@ namespace Tmpl8 {
 		Button playButton;
 		Button quitButton;
 
-		bool quit = false;
 		bool playButtonPressed = (bool) a;
 
 		MainMenu();
