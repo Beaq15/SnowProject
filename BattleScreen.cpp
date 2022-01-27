@@ -23,7 +23,6 @@ namespace Tmpl8 {
 		heroAnimationSet.setup(80, 560, CharacterType::snowQueenType);
 		enemyAnimationSet.setup(600, 350, enemyType);
 
-		//revise polymorphism lessons from before if confused
 		if (enemyType == CharacterType::snowmanType)
 			enemy = new Snowman();
 		else if (enemyType == CharacterType::bigFootType)
